@@ -1,0 +1,356 @@
+section#profile.home-section
+	a.btn-close(href="#!") 
+		i.material-icons arrow_back
+	.row.no-gutters
+		.col-12.col-lg-4.col-xl-5
+			.home-title
+				.bg(style="background:url(img/menubg1.jpg) center center no-repeat;background-size: cover")
+				.title Profile
+				.des Some words about me.
+		.col-12.col-lg-8.col-xl-7
+			.home-content
+				.home-profile
+					.page-title About me
+					.content
+						p I’m a 23 years old Front-end Developer from Vietnam. I was born on May 19th, 1995 in a small town called Quy Nhon City.
+						p I have 2+ years of experience working as a Front-end Developer.
+						p I’m very interested in learning and exploring new things.
+						.text-center
+							figure
+								img(src="img/img1.jpg", alt="My Pic")
+						h5
+							strong Hobbies and interests: 
+						.hobbies-list
+							.item
+								.hobbies
+									.icon <i class="fa fa-code" aria-hidden="true"></i>
+									.name Coding
+							.item
+								.hobbies
+									.icon <i class="fa fa-plane" aria-hidden="true"></i>
+									.name Traveling
+							.item
+								.hobbies
+									.icon <i class="fa fa-film" aria-hidden="true"></i>
+									.name Movie
+							.item
+								.hobbies
+									.icon <i class="fa fa-music" aria-hidden="true"></i>
+									.name Music
+							.item
+								.hobbies
+									.icon <i class="fa fa-gamepad" aria-hidden="true"></i>
+									.name Game
+							.item
+								.hobbies
+									.icon <i class="fa fa-beer" aria-hidden="true"></i>
+									.name Beer
+section#resume.home-section
+	a.btn-close(href="#!") 
+		i.material-icons arrow_back
+	.row.no-gutters
+		.col-12.col-lg-4.col-xl-5
+			.home-title
+				.bg(style="background:url(img/menubg2.jpg) center center no-repeat;background-size: cover")
+				.title Resume
+				.des Some thing about my experience and skills.
+		.col-12.col-lg-8.col-xl-7
+			.home-content
+				.home-education
+					.page-title Education
+					.education-chart
+						.milestone
+							.year 2013 - 2017
+								.dot
+							.school
+								.name INDUSTRIAL UNIVERSITY OF HOCHIMINH CITY
+								.type Information Technology
+						.milestone
+							.year 2010 - 2013
+								.dot
+							.school
+								.name QUOC HOC QUY NHON
+								.type High School Education
+				.home-experience
+					.page-title Experience
+					.experience-chart
+						.milestone
+							.info
+								time
+									.form
+										span From
+										strong August 2016
+									.to
+										span to
+										strong August 2018
+								.place
+									.name Canh Cam
+									.location Ho Chi Minh City
+									.website
+										a(href="https://www.canhcam.vn") https://www.canhcam.vn
+							.event
+								.content
+									ul
+										li Front-end team leader and internship trainer
+										li Developed front-end code for 100+ website projects, using html HTML/CSS/JQUERY and Bootstrap framework, deliver high UI/UX quality design, HTML code and test cross-platforms (browsers / mobiles)
+										li Work with PM and Account teams to create innovative product solutions to meet business objectives.
+										li Develop tools to make the front-end development process more efficient. 
+										li Provided a web optimization.
+						.milestone
+							.info
+								time
+									.form
+										span From
+										strong June 2015
+									.to
+										span to
+										strong August 2016
+								.place
+									.name Derasoft
+									.location Ho Chi Minh City
+									.website
+										a(href="https://derasoft.com/") https://derasoft.com/
+							.event
+								.content
+									ul
+										li Create a professional web layout in Photoshop.
+										li Convert PSD to HTML/CSS/JQUERY (Responsive).
+				.home-skill
+					.page-title Skills and Languages
+					.skill-list
+						.item
+							.skill-item
+								.name HTML/JADE/PUG
+									.progressbar-percent 90%
+								.progressbar
+									.progressbar-current(style="max-width:90%")
+						.item
+							.skill-item
+								.name CSS/LESS/SCSS/SASS
+									.progressbar-percent 95%
+								.progressbar
+									.progressbar-current(style="max-width:95%")
+						.item
+							.skill-item
+								.name JAVASCRIPT/JQUERY
+									.progressbar-percent 80%
+								.progressbar
+									.progressbar-current(style="max-width:80%")
+						.item
+							.skill-item
+								.name Photoshop
+									.progressbar-percent 80%
+								.progressbar
+									.progressbar-current(style="max-width:80%")
+						.item
+							.skill-item
+								.name UI
+									.progressbar-percent 80%
+								.progressbar
+									.progressbar-current(style="max-width:80%")
+						.item
+							.skill-item
+								.name UX
+									.progressbar-percent 70%
+								.progressbar
+									.progressbar-current(style="max-width:70%")
+						.item
+							.skill-item
+								.name Vietnamese
+									.progressbar-percent 100%
+								.progressbar
+									.progressbar-current(style="max-width:100%")
+						.item
+							.skill-item
+								.name English
+									.progressbar-percent 60%
+								.progressbar
+									.progressbar-current(style="max-width:60%")
+section#portfolio.home-section
+	a.btn-close(href="#!") 
+		i.material-icons arrow_back
+	.row.no-gutters
+		.col-12.col-lg-4.col-xl-5
+			.home-title
+				.bg(style="background:url(img/menubg3.jpg) center center no-repeat;background-size: cover")
+				.title Portfolio
+				.des Have a spoon of my work.
+		.col-12.col-lg-8.col-xl-7
+			.home-content
+				.home-portfolio
+					.page-title Portfolio
+					.portfolio-category
+						ul
+							li
+								a.active(href="#!" data-filter="*") All
+							li
+								a(href="#!" data-filter=".new") New
+							li
+								a(href="#!" data-filter=".corporate") Corporate
+							li
+								a(href="#!" data-filter=".ecommerce") Ecommerce
+					.portfolio-grid.grid
+						.grid-item
+							a.project(target="_blank" href="https://www.canhcam.vn/")
+								.img
+									img(src="img/project/canhcam.jpg", alt="")
+								.name Canh Cam
+						.grid-item.new.corporate
+							a.project(target="_blank" href="https://www.cathaylife.com.vn/")
+								.img
+									img(src="img/project/cathaylife.jpg", alt="")
+								.name Cathay Life
+						.grid-item.new.corporate
+							a.project(target="_blank" href="https://www.baohiemchubblife.vn/clientinfo/")
+								.img
+									img(src="img/project/chubblife.jpg", alt="")
+								.name Chubb Life
+						.grid-item.new.ecommerce
+							a.project(target="_blank" href="https://dominos.vn/")
+								.img
+									img(src="img/project/dominos.jpg", alt="")
+								.name Domino's Pizza
+						.grid-item.new.corporate
+							a.project(target="_blank" href="http://www.htv.com.vn/")
+								.img
+									img(src="img/project/htv.jpg", alt="")
+								.name HTV
+						.grid-item.new.corporate
+							a.project(target="_blank" href="http://www.sabeco.com.vn/trang-chu")
+								.img
+									img(src="img/project/sabeco.jpg", alt="")
+								.name Sabeco
+						.grid-item.corporate
+							a.project(target="_blank" href="https://www.sacombank.com.vn")
+								.img
+									img(src="img/project/sacombank.jpg", alt="")
+								.name Sacombank
+						.grid-item.ecommerce
+							a.project(target="_blank" href="https://coopmart.vn/")
+								.img
+									img(src="img/project/coopmart.jpg", alt="")
+								.name Coopmart Online
+						.grid-item.ecommerce
+							a.project(target="_blank" href="https://www.skywatch.vn/")
+								.img
+									img(src="img/project/skywatch.jpg", alt="")
+								.name Skywatch
+						.grid-item.corporate
+							a.project(target="_blank" href="http://www.vietbank.com.vn/")
+								.img
+									img(src="img/project/vietbank.jpg", alt="")
+								.name Vietbank
+						.grid-item.ecommerce
+							a.project(target="_blank" href="https://techzones.vn/")
+								.img
+									img(src="img/project/techzones.jpg", alt="")
+								.name Techzones
+						.grid-item.new.corporate
+							a.project(target="_blank" href="http://www.dfcompany.vn/")
+								.img
+									img(src="img/project/dfcompany.jpg", alt="")
+								.name DF Company
+						.grid-item.ecommerce
+							a.project(target="_blank" href="http://houseofluggage.vn/")
+								.img
+									img(src="img/project/hol.jpg", alt="")
+								.name House Of Luggage
+						.grid-item.ecommerce
+							a.project(target="_blank" href="https://samsonite-indochine.com/")
+								.img
+									img(src="img/project/samsonite.jpg", alt="")
+								.name Samsonite
+						.grid-item.corporate
+							a.project(target="_blank" href="http://ketnoi3s.com/")
+								.img
+									img(src="img/project/vinhtuong3s.jpg", alt="")
+								.name Vĩnh Tường 3s
+						.grid-item.corporate
+							a.project(target="_blank" href="https://www.vinhtuong.com/duraflex/")
+								.img
+									img(src="img/project/duraflex.jpg", alt="")
+								.name Vĩnh Tường Duraflex
+						.grid-item.ecommerce
+							a.project(target="_blank" href="http://www.insulac-emark.com/")
+								.img
+									img(src="img/project/insulac.jpg", alt="")
+								.name Insulac
+						.grid-item.corporate
+							a.project(target="_blank" href="https://www.diaockimoanh.com.vn/")
+								.img
+									img(src="img/project/kimoanhgroup.jpg", alt="")
+								.name Kim Oanh Real Estate
+						.grid-item.ecommerce
+							a.project(target="_blank" href="http://www.handbagmrvui.com/")
+								.img
+									img(src="img/project/mrvui.jpg", alt="")
+								.name Mr.Vui Hand Bag
+						.grid-item.new.corporate
+							a.project(target="_blank" href="https://www.nitiponclinic.vn/")
+								.img
+									img(src="img/project/nitipon.jpg", alt="")
+								.name Nitipon Clinic
+						.grid-item.corporate
+							a.project(target="_blank" href="http://www.pct.com.vn/")
+								.img
+									img(src="img/project/pct.jpg", alt="")
+								.name PCT
+						.grid-item.corporate
+							a.project(target="_blank" href="http://pvinvest.vn/")
+								.img
+									img(src="img/project/pvinvest.jpg", alt="")
+								.name PV Invest
+						.grid-item.corporate
+							a.project(target="_blank" href="http://www.remeeco.vn/")
+								.img
+									img(src="img/project/remeeco.jpg", alt="")
+								.name Remeeco
+						.grid-item.ecommerce
+							a.project(target="_blank" href="http://tcvietnam.com.vn/")
+								.img
+									img(src="img/project/tcgroup.jpg", alt="")
+								.name TC Group
+						.grid-item.corporate
+							a.project(target="_blank" href="http://www.duhoc.usc.edu.vn/")
+								.img
+									img(src="img/project/usc.jpg", alt="")
+								.name USC
+section#contact.home-section
+	a.btn-close(href="#!") 
+		i.material-icons arrow_back
+	.row.no-gutters
+		.col-12.col-lg-4.col-xl-5
+			.home-title
+				.bg(style="background:url(img/menubg4.jpg) center center no-repeat;background-size: cover")
+				.title Contact
+				.des Say hello or find me.
+		.col-12.col-lg-8.col-xl-7
+			.home-content
+				.home-contact
+					.page-title Contact
+					.row.align-items-center
+						.col-12.col-xl-6
+							.contact-map
+								iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1008.3381790653231!2d106.66490921295868!3d10.847329798054995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529ba8314208d%3A0xc579d6ff62dc1da3!2zMzcvMjdFIEjhurttIDUzNSwgUGjGsOG7nW5nIDE2LCBHw7IgVuG6pXAsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1534598682999', width='100%', height='300', frameborder='0', style='border:0', allowfullscreen='')
+						.col-12.col-xl-6
+							.contact-info
+								a.item(href="mailto:maiquocqui@gmail.com")
+									.icon <i class="fa fa-envelope-o" aria-hidden="true"></i>
+									.caption
+										.name Email
+										.detail maiquocqui@gmail.com
+								a.item(href="tel:+84981540288")
+									.icon <i class="fa fa-phone" aria-hidden="true"></i>
+									.caption
+										.name Phone
+										.detail +84 981 540 288
+								a.item(href="skype:live:quimq1905?chat")
+									.icon <i class="fa fa-skype" aria-hidden="true"></i>
+									.caption
+										.name Skype
+										.detail live:quimq1905
+								a.item(href="https://www.facebook.com/")
+									.icon <i class="fa fa-facebook" aria-hidden="true"></i>
+									.caption
+										.name Follow me
+										.detail Facebook

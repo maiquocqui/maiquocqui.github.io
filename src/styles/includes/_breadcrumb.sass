@@ -1,0 +1,53 @@
+.breadcrumb-wrap
+	.breadcrumb-content
+		background: darken($white,10%)
+	.breadcrumb
+		margin: 0
+		padding: 10px 0
+		background: none
+		+bor-rad(0)
+		+flexbox
+		li
+			&:after
+				content: '\f105'
+				margin: 0px 10px
+			a
+				+fs(13rem)
+				line-height: 20px
+				color: darken($white,60%)
+			&:last-child
+				&:after
+					display: none
+				a
+					color: $blue
+	.page-banner
+		+pos(rel,null)
+		img
+			width: 100%
+			+media-breakpoint-down(lg)
+				height: 300px
+				object-fit: cover
+			+media-breakpoint-down(md)
+				height: 250px
+			+media-breakpoint-down(sm)
+				height: 200px
+		.banner-caption
+			+pos(abs, 20% null null auto)
+			max-width: 450px
+			+media-breakpoint-down(xs)
+				right: 15px
+				left: 15px
+			.big
+				+fs(40rem)
+				line-height: 1.3
+				font-weight: bold
+				color: $blue
+				margin-bottom: 10px
+				+media-breakpoint-down(md)
+					+fs(32rem)
+					margin-bottom: 5px
+			.des
+				+fs(15rem)
+				color: $main
+				+media-breakpoint-down(md)
+					+fs(14rem)

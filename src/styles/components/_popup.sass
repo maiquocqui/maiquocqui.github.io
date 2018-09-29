@@ -1,0 +1,47 @@
+.page-popup
+	background: color-rgba($black,0.5)
+	+pos(fix, 0 null 0 0)
+	right: 0
+	z-index: 1100
+	overflow: hidden
+	+flexbox
+	align-items: flex-end
+	align-content: flex-end
+	visibility: hidden
+	opacity: 0
+	+transition(all,0.5s)
+	&.popup-option
+		bottom: 61px
+	&.open
+		visibility: visible
+		opacity: 1
+		.popup-dialog
+			+transform(translateY(0%))
+	.popup-dialog
+		width: 100%
+		background: $white 
+		+bor-rad(5px 5px 0 0)
+		max-height: 100%
+		overflow: auto
+		padding: 0px 10px
+		+pos(rel,null)
+		+transform(translateY(100%))
+		+transition(all,0.5s)
+		.popup-header
+			border-bottom: 1px solid darken($white,10%)
+			min-height: 50px
+			.close-popup
+				+pos(abs, 12px 10px null null)
+				z-index: 5
+				color: darken($white,40%)
+				.material-icons
+					display: block
+				&:hover
+					color: $red
+		.popup-body
+			.product-option
+				padding: 10px 0
+				label
+					&:after
+						display: none
+

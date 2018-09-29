@@ -1,0 +1,139 @@
+.product-item
+	height: 100%
+	+pos(rel,null)
+	+media-breakpoint-down(lg)
+		height: 100%
+	.btn_compare
+		// display: none
+		+pos(abs,0 null 0 0)
+		right: 0
+		+fs(0)
+		visibility: hidden
+		opacity: 0
+		z-index: 10
+		&:before
+			content: '\f00c'
+			display: block
+			width: 30px
+			height: 30px
+			line-height: 30px
+			text-align: center
+			border: 1px solid darken($white,10%)
+			+bor-rad(50px)
+			+fs(16rem)
+			margin-top: 10px
+			margin-left: 10px
+			color: darken($white,20%)
+		&.active
+			&:before
+				// border-color: color-rgba($white,0)
+				// background: linear-gradient(to right, $lpurple, $dpurple)
+				color: $white
+
+.product-col
+	display: block
+	height: 100%
+	padding: 10px
+	border: 1px solid transparent
+	+bor-rad(5px)
+	+transition(all,0.5s)
+	+media-breakpoint-down(lg)
+		padding: 5px
+	+media-breakpoint-down(sm)
+		padding: 10px
+	figure
+		+pos(rel,null)
+		.product-img
+			display: block
+			+flexbox
+			margin: 0px -10px
+			height: 200px
+			justify-content: center
+			align-items: center
+			align-content: center
+			overflow: hidden
+			+media-breakpoint-down(lg)
+				margin: 0px -5px
+				height: 180px
+			+media-breakpoint-down(sm)
+				margin: 0 -10px
+			picture
+				width: 100%
+				height: 100%
+				+flexbox
+				justify-content: center
+				align-items: center
+				align-content: center
+			img
+				max-width: 100%
+				max-height: 100%
+		figcaption
+			padding-top: 10px
+			.product-name
+				+fs(14rem)
+				line-height: 1.3
+				font-weight: 500
+				color: $black
+				display: -webkit-box
+				-webkit-line-clamp: 2
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
+				+transition(all,0.5s)
+				a
+					color: $black
+			.product-price
+				margin-top: 5px
+				+pos(rel,null)
+				.promotion
+					+pos(abs, 2px 0 null null)
+					+fs(11rem)
+					font-weight: 600
+					color: $white
+					padding: 0px 5px
+					+bor-rad(3px)
+					&.off
+						background: linear-gradient(to right, $orange, $deeporange)
+				.new
+					+fs(14rem)
+					line-height: 1
+					font-weight: 700
+					color: $red
+					+media-breakpoint-down(lg)
+						// +fs(12rem)
+				.old
+					+fs(10rem)
+					line-height: 1
+					color: darken($white,40%)
+					text-decoration: line-through
+			.product-rating
+				+flexbox
+				align-items: center
+				align-content: center
+				padding: 5px 0
+				flex-wrap: wrap
+				+media-breakpoint-down(lg)
+				.br-wrapper
+					margin-right: 5px
+				span
+					+fs(12rem)
+					color: darken($white,40%)
+			.product-des
+				+fs(12rem)
+				line-height: 1.4
+				white-space: normal
+				margin-top: 5px
+				color: $main
+				ul
+					list-style-type: disc
+					padding-left: 20px
+					li
+	&:hover
+		+media-breakpoint-up(xl)
+			border: 1px solid darken($white,10%)
+			// box-shadow: 0px 10px 20px -10px color-rgba($black,0.2)
+			figure
+				figcaption
+					.product-name
+						color: $blue
+			

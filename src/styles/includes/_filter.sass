@@ -1,0 +1,133 @@
+.product-filter
+	+pos(fix, 0 0 0 null)
+	width: 280px
+	background: $white
+	z-index: 1100
+	padding: 10px 0 50px
+	+transform(translateX(100%))
+	+transition(all,0.5s)
+	&.open
+		+transform(translateX(0))
+	.filter-wrap
+		height: calc(100vh - 40px)
+		padding: 0px 10px
+		overflow: auto
+	.filter-group
+		padding-bottom: 10px
+		margin-bottom: 10px
+		border-bottom: 1px solid darken($white,10%)
+	.filter-name
+		+fs(14rem)
+		font-weight: 500
+		margin-bottom: 10px
+	.filter-category
+		> ul
+			> li
+				+pos(rel,null)
+				> a
+					display: block
+					+fs(14rem)
+					padding: 0 0 10px
+					font-weight: 500
+					text-transform: uppercase
+				.btn-showsub
+					+pos(abs, 0px 0 null null)
+					&:before
+						content: '\f107'
+				.sub
+					display: none
+					ul
+						+flexbox
+						flex-wrap: wrap
+						li
+							margin-right: 10px
+							margin-bottom: 10px
+							a
+								display: block
+								+fs(13rem)
+								padding: 3px 15px
+								border: 1px solid darken($white,10%)
+								background: darken($white,3%)
+							&.active
+								a
+									color: $red
+									background: color-rgba($red,0.1)
+									border-color: color-rgba($red,0.5)
+									+pos(rel,null)
+									&:after
+										content: ''
+										display: block
+										+pos(abs, null 0 0 null)
+										z-index: 1
+										width: 0
+										height: 0
+										border: 3px solid transparent
+										border-right-color: color-rgba($red,0.5)
+										border-bottom-color: color-rgba($red,0.5)
+				&.active
+					> a
+						color: $red
+					.sub
+						display: block
+	.filter-ajax
+		ul
+			+flexbox
+			flex-wrap: wrap
+			li
+				margin-right: 10px
+				margin-bottom: 10px
+				a
+					display: block
+					+fs(13rem)
+					padding: 3px 15px
+					border: 1px solid darken($white,10%)
+					background: darken($white,3%)
+					&.active
+						color: $red
+						background: color-rgba($red,0.1)
+						border-color: color-rgba($red,0.5)
+						+pos(rel,null)
+						&:after
+							content: ''
+							display: block
+							+pos(abs, null 0 0 null)
+							z-index: 1
+							width: 0
+							height: 0
+							border: 3px solid transparent
+							border-right-color: color-rgba($red,0.5)
+							border-bottom-color: color-rgba($red,0.5)
+				&.active
+					a
+						color: $red
+						background: color-rgba($red,0.1)
+						border-color: color-rgba($red,0.5)
+						+pos(rel,null)
+						&:after
+							content: ''
+							display: block
+							+pos(abs, null 0 0 null)
+							z-index: 1
+							width: 0
+							height: 0
+							border: 3px solid transparent
+							border-right-color: color-rgba($red,0.5)
+							border-bottom-color: color-rgba($red,0.5)
+	.filter-button
+		+flexbox
+		+pos(abs, null 0 0 0)
+		z-index: 3
+		background: $white
+		.btn-reset, .btn-close
+			display: block
+			width: 50%
+			+fs(14rem)
+			font-weight: 500
+			text-transform: uppercase
+			line-height: 40px
+			text-align: center
+			color: $white
+		.btn-reset
+			background: $bluegradient
+		.btn-close
+			background: $orangegradient

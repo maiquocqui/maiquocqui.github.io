@@ -1,0 +1,563 @@
+.home-section
+	width: 100%
+	height: 100vh
+	+pos(rel,null)
+	display: none
+	+media-breakpoint-down(md)
+		height: auto
+	.btn-close
+		+pos(fix, 30px null null 30px)
+		z-index: 100
+		color: $white
+		+media-breakpoint-down(md)
+			top: 15px
+			left: 15px
+		.material-icons
+			+fs(32rem)
+		&.active
+			color: $main
+	.home-title
+		height: 100vh
+		+flexbox
+		align-items: flex-end
+		align-content: flex-end
+		flex-wrap: wrap
+		padding: 0px 40px 200px
+		+media-breakpoint-down(md)
+			height: 250px
+			padding-bottom: 50px
+		+media-breakpoint-down(xs)
+			padding: 0px 20px 40px
+		&:before
+			content: ''
+			+pos(abs, 0 null 0 0)
+			right: 0
+			z-index: 1
+			background: #1a1b23
+			opacity: 0.8
+		.bg
+			+pos(abs, 0 null 0 0)
+			right: 0
+		.title
+			width: 70%
+			+pos(rel,null)
+			z-index: 5
+			+fs(46rem)
+			color: $amber
+			text-transform: uppercase
+			font-weight: 600
+			+media-breakpoint-down(lg)
+				+fs(36rem)
+				width: 100%
+			+media-breakpoint-down(xs)
+				+fs(28rem)
+			&:after
+				content: ''
+				display: block
+				height: 1px
+				background: $white
+		.des
+			width: 100%
+			+pos(rel,null)
+			z-index: 5
+			opacity: 1
+			margin-top: 10px
+			+fs(16rem)
+			color: $white
+			font-style: italic
+			+media-breakpoint-down(lg)
+				+fs(14rem)
+			+media-breakpoint-down(xs)
+				+fs(13rem)
+
+	.home-content
+		height: 100vh
+		background: $white
+		overflow: auto
+		+media-breakpoint-down(md)
+			height: auto
+			min-height: 100vh
+
+#profile
+
+.page-title
+	+fs(24rem)
+	text-transform: uppercase
+	font-weight: 800
+	margin-bottom: 20px
+	+media-breakpoint-down(sm)
+		+fs(22rem)
+	+media-breakpoint-down(xs)
+		+fs(18rem)
+	&:after
+		content: ''
+		display: block
+		width: 60px
+		height: 2px
+		background: $amber
+		margin: 5px 0 0
+.home-profile
+	padding: 50px 60px
+	+media-breakpoint-down(md)
+		padding: 40px
+	+media-breakpoint-down(sm)
+		padding: 30px
+	+media-breakpoint-down(xs)
+		padding: 20px
+
+	.content
+		// font-weight: 500
+		+media-breakpoint-down(md)
+			+fs(14rem)
+	.hobbies-list
+		+flexbox
+		flex-wrap: wrap
+		.item
+			width: 33.33%
+			text-align: center
+			+media-breakpoint-down(sm)
+				width: 50%
+			+media-breakpoint-down(xs)
+				width: 50%
+	.hobbies
+		margin-bottom: 15px
+		+flexbox
+		align-items: center
+		align-content: center
+		.icon
+			width: 80px
+			height: 80px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			border: 2px solid $amber
+			color: $main
+			+fs(32rem)
+			+bor-rad(50px)
+			+pos(rel,null)
+			+media-breakpoint-down(sm)
+				width: 50px
+				height: 50px
+				+fs(18rem)
+			&:before 
+				content: ''
+				+pos(abs, 0 null 0 0)
+				right: 0
+				+bor-rad(50px)
+				background: $amber
+				opacity: 0
+				+transform(scale3d(0,0,0))
+				+transition(all,0.5s)
+			.fa
+				+pos(rel,null)
+				z-index: 3
+		.name
+			text-transform: uppercase
+			font-weight: 600
+			+fs(13rem)
+			padding-left: 10px
+		&:hover
+			.icon
+				&:before
+					opacity: 1
+					+transform(scale3d(1,1,1))
+.home-education
+	padding: 50px 60px
+	+media-breakpoint-down(md)
+		padding: 40px
+	+media-breakpoint-down(sm)
+		padding: 30px
+	+media-breakpoint-down(xs)
+		padding: 20px
+	.education-chart
+		+pos(rel,null)
+		padding: 15px 0
+		&:before
+			content: ''
+			+pos(abs, 0 null 0 130px)
+			width: 2px
+			background: $main
+			+transform(translateX(-50%))
+			+media-breakpoint-down(xs)
+				left: 4px
+				+transform(translateX(0))
+		.milestone
+			+flexbox
+			flex-wrap: wrap
+			align-items: flex-start
+			align-content: flex-start
+			margin-bottom: 20px
+			+media-breakpoint-down(xs)
+				padding-left: 20px
+			&:last-child
+				margin-bottom: 0
+			.year
+				+fs(14rem)
+				line-height: 25px
+				text-align: center
+				font-weight: 600
+				text-transform: uppercase
+				background: $amber
+				+bor-rad(5px)
+				width: 110px
+				+pos(rel,null)
+				+media-breakpoint-down(xs)
+					margin-bottom: 10px
+				&:after
+					content: ''
+					display: block
+					border: 6px solid transparent
+					border-right: none
+					border-left-color: $amber
+					+pos(abs, 50% 0 null null)
+					+transform(translate(100%,-50%))
+					+media-breakpoint-down(xs)
+						border-right: 6px solid $amber
+						border-left: none
+						right: unset
+						left: 0
+						+transform(translate(-100%,-50%))
+				.dot
+					display: block
+					width: 10px
+					height: 10px
+					+bor-rad(50px)
+					background: $main
+					+pos(abs, 50% -20px null null)
+					+transform(translate(50%,-50%))
+					+media-breakpoint-down(xs)
+						right: unset
+						left: -20px
+						+transform(translate(0,-50%))
+					&:before 
+						content: ''
+						+pos(abs, 0 null 0 0)
+						right: 0
+						z-index: 1
+						+bor-rad(50px)
+						background: $amber
+						border: 1px solid $amber
+						animation-name: dot-animate
+						animation-duration: 1s
+						animation-iteration-count: infinite
+					&:after
+						content: ''
+						+pos(abs, 0 null 0 0)
+						right: 0
+						z-index: 3
+						+bor-rad(50px)
+						background: $main
+			.school
+				width: calc(100% - 150px)
+				margin-left: 40px
+				+media-breakpoint-down(xs)
+					width: 100%
+					margin-left: 0
+					line-height: 1.3
+				.name
+					+fs(16rem)
+					font-weight: 600
+					text-transform: uppercase
+					+media-breakpoint-down(xs)
+						+fs(14rem)
+				.type
+					+fs(14rem)
+					color: darken($white,60%)
+					font-weight: 300
+					+media-breakpoint-down(xs)
+						+fs(12rem)
+.home-experience
+	background: #f4f9ff
+	padding: 50px 60px
+	+media-breakpoint-down(md)
+		padding: 40px
+	+media-breakpoint-down(sm)
+		padding: 30px
+	+media-breakpoint-down(xs)
+		padding: 20px
+	.experience-chart
+		.milestone
+			+flexbox
+			flex-wrap: wrap
+			box-shadow: 0px 12px 90px -10px rgba(171, 191, 216, 0.6)
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
+			.info
+				background: $amber
+				padding: 30px
+				width: 300px
+				+media-breakpoint-down(lg)
+					width: 220px
+					padding: 20px
+				+media-breakpoint-down(xs)
+					width: 100%
+				time
+					+flexbox
+					margin-bottom: 20px
+					+media-breakpoint-down(xs)
+						margin-bottom: 10px
+					.form, .to
+						width: 50%
+						span
+							+fs(12rem)
+							text-transform: uppercase
+							display: block
+							opacity: 0.8
+							+media-breakpoint-down(lg)
+								+fs(11rem)
+						strong
+							+fs(15rem)
+							font-weight: 600
+							display: block
+							opacity: 0.8
+							+media-breakpoint-down(lg)
+								+fs(13rem)
+				.place
+					line-height: 1.3
+					.name
+						+fs(24rem)
+						font-weight: 700
+						+media-breakpoint-down(lg)
+							+fs(18rem)
+					.location
+						+fs(13rem)
+						text-transform: uppercase
+						opacity: 0.8
+						+media-breakpoint-down(lg)
+							+fs(11rem)
+						&:before
+							content: '\f124'
+							margin-right: 5px
+					.website
+						+fs(13rem)
+						// text-transform: uppercase
+						opacity: 0.8
+						+media-breakpoint-down(lg)
+							+fs(11rem)
+						&:before
+							content: '\f0ac'
+							margin-right: 5px
+			.event
+				background: $white
+				width: calc(100% - 300px)
+				padding: 30px
+				+media-breakpoint-down(lg)
+					padding: 20px
+					width: calc(100% - 220px)
+					.content
+						+fs(14rem)
+				+media-breakpoint-down(xs)
+					width: 100%
+				ul
+					li
+						margin-bottom: 10px
+
+@keyframes progressbar 
+	from
+		width: 0%
+	to
+		width: 100%
+.progressbar-run
+	-webkit-animation-name: progressbar
+	animation-name: progressbar
+.home-skill
+	padding: 50px 60px
+	+media-breakpoint-down(md)
+		padding: 40px
+	+media-breakpoint-down(sm)
+		padding: 30px
+	+media-breakpoint-down(xs)
+		padding: 20px
+	.skill-list
+		+flexbox
+		flex-wrap: wrap
+		margin: 0px -15px
+		.item
+			padding: 0px 15px
+			width: 50%
+			+media-breakpoint-down(xs)
+				width: 100%
+			.skill-item
+				+pos(rel,null)
+				margin-bottom: 20px
+				.name
+					+fs(13rem)
+					font-weight: 600
+					margin-bottom: 5px
+				.progressbar
+					width: 100%
+					height: 5px
+					background: darken($white,10%)
+					+pos(rel,null)
+					.progressbar-current
+						background: linear-gradient(to right, $amber, $orange)
+						+pos(abs, 0 null 0 0)
+						width: 100%
+						+transition(all,1s)
+
+				.progressbar-percent
+					+fs(13rem)
+					font-weight: 500
+					+pos(abs, 0 0 null null)
+
+.home-portfolio
+	padding: 50px 60px
+	+media-breakpoint-down(md)
+		padding: 40px
+	+media-breakpoint-down(sm)
+		padding: 30px
+	+media-breakpoint-down(xs)
+		padding: 20px
+	.portfolio-category
+		margin-bottom: 20px
+		ul
+			+flexbox
+			+media-breakpoint-down(xs)
+				margin: 0px -5px
+				flex-wrap: wrap
+			li
+				+media-breakpoint-down(xs)
+					padding: 0px 5px
+					width: 50%
+					margin-bottom: 10px
+				+ li
+					margin-left: 10px
+					+media-breakpoint-down(xs)
+						margin-left: 0
+				a
+					display: block
+					+fs(14rem)
+					font-weight: 700
+					+bor-rad(50px)
+					text-transform: uppercase
+					border: 1px solid darken($white,10%)
+					padding: 8px 30px
+					text-align: center
+					+media-breakpoint-down(lg)
+						+fs(12rem)
+						padding: 6px 20px
+					&.active
+						background: $amber
+						border-color: $amber
+	.portfolio-grid
+		display: block
+		margin: 0px -10px
+		width: calc(100% + 20px)
+		.grid-item
+			width: 33.33%
+			padding: 0px 10px
+			+media-breakpoint-down(lg)
+				width: 50%
+			+media-breakpoint-down(xs)
+				width: 100%
+	.project
+		display: block
+		text-align: center
+		margin-bottom: 20px
+		.img
+			width: 100%
+			margin-bottom: 10px
+			+pos(rel,null)
+			overflow: hidden
+			border: 1px solid darken($white,10%)
+			&:before
+				content: '\f08e'
+				+pos(abs, 0 null 0 0)
+				right: 0
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+fs(36rem)
+				z-index: 1
+				color: $white
+				background: color-rgba($amber,0.5)
+				+transform(scale3d(3,3,1))
+				opacity: 0
+				+transition(all,0.5s)
+			img
+				+transition(all,10s)
+		.name
+			display: inline-block
+			+fs(14rem)
+			font-weight: 700
+			text-transform: capitalize
+			padding: 7px 20px
+			+bor-rad(50px)
+			background: color-rgba($black,0.05)
+			+transition(all,0.5s)
+			+media-breakpoint-down(lg)
+				+fs(12rem)
+		&:hover
+			.img
+				&:before
+					opacity: 1
+					+transform(scale3d(1,1,1))
+				img
+					+transform(scale3d(1.2,1.2,1))
+			.name
+				background: color-rgba($amber,0.8)
+
+.home-contact
+	padding: 50px 60px
+	+media-breakpoint-down(md)
+		padding: 40px
+	+media-breakpoint-down(sm)
+		padding: 30px
+	+media-breakpoint-down(xs)
+		padding: 20px
+	.contact-map
+		// +bor-rad(5px)
+		overflow: hidden
+		border: 1px solid darken($white,10%)
+		+media-breakpoint-down(lg)
+			margin-bottom: 30px
+		iframe
+			+media-breakpoint-down(md)
+				height: 350px
+			+media-breakpoint-down(xs)
+				height: 300px
+	.contact-info
+		.item
+			+flexbox
+			align-items: center
+			align-content: center
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+			.icon
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				width: 50px
+				height: 50px
+				color: $main
+				border: 2px solid $amber
+				+fs(20rem)
+				+transition(all,0.5s)
+			.caption
+				line-height: 1.2
+				width: calc(100% - 40px)
+				padding-left: 20px
+				.name
+					+fs(13rem)
+					text-transform: uppercase
+					font-weight: 500
+					opacity: 0.8
+					+media-breakpoint-down(lg)
+						+fs(12rem)
+				.detail
+					+fs(20rem)
+					font-weight: 600
+					+transition(all,0.5s)
+					+media-breakpoint-down(lg)
+						+fs(16rem)
+			&:hover
+				.icon
+					background: $amber
+				.caption
+					.detail
+						// color: $amber

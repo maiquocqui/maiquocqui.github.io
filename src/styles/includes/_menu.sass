@@ -1,0 +1,146 @@
+.menu
+	// display: none
+	+media-breakpoint-down(lg)
+		+pos(fix, 0 null 0 0)
+		overflow: auto
+		z-index: 1000
+		background: $white
+		width: 330px
+		+transform(translateX(-100%))
+		+transition(all,0.5s)
+		&.open
+			+transform(translateX(0))
+	+media-breakpoint-down(sm)
+		width: 280px
+	.menu-banner
+		display: none
+		+media-breakpoint-down(lg)
+			display: block
+	.menu-login
+		display: none
+		+media-breakpoint-down(lg)
+			+flexbox
+			align-items: center
+			align-content: center
+			padding: 10px 20px
+			background: $bluegradient
+			.avt
+				width: 40px
+			ul
+				padding-left: 10px
+				+flexbox
+				flex-wrap: wrap
+				li
+					display: block
+					width: 100%
+					&:nth-child(1)
+						order: 2
+					&:nth-child(2)
+						order: 1
+				a
+					display: block
+					+fs(11rem)
+					line-height: 1.5
+					color: $white
+					opacity: 0.8
+					text-transform: uppercase
+					&:after
+						content: '\f105'
+						margin-left: 5px
+				.btn-login
+					+fs(13rem)
+					font-weight: 700
+					opacity: 1
+	.menu-wrap
+		+media-breakpoint-down(lg)
+			padding: 10px 0
+	ul.menu-link
+		+flexbox
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+		&.menu-pc
+			+media-breakpoint-down(lg)
+				display: none
+		&.menu-mobile
+			display: none
+			+media-breakpoint-down(lg)
+				+flexbox
+				align-items: center
+				align-content: center
+		li
+			+media-breakpoint-down(lg)
+				width: 100%
+			+ li
+				margin-left: 5px
+				+media-breakpoint-down(lg)
+					margin-left: 0
+			a
+				+flexbox
+				align-items: center
+				align-content: center
+				line-height: 20px
+				+fs(14rem)
+				padding: 10px 15px
+				color: $main
+				+pos(rel,null)
+				+media-breakpoint-down(lg)
+					color: darken($white,60%)
+				&:after
+					content: ''
+					+pos(abs, null 0 0 0)
+					height: 3px
+					background: $bluegradient
+					z-index: 1
+					opacity: 0
+					+transition(all,0.5s)
+				.material-icons
+					margin-right: 5px
+					+fs(18rem)
+					+media-breakpoint-down(lg)
+						+fs(24rem)
+						margin-right: 10px
+				span
+					font-weight: 700
+					+media-breakpoint-down(lg)
+						font-weight: normal
+			&.sale
+				border-left: 1px solid color-rgba($black,0.1)
+				padding-left: 20px
+				a
+					padding: 0
+					color: darken($white,60%)
+				&.active
+					&:after
+						display: none
+			&:hover
+				a
+					color: $blue
+			&.active
+				a
+					color: $main
+					&:after
+						opacity: 1
+	.menu-contact
+		display: none
+		margin: 0px 20px
+		border-top: 1px solid darken($white,5%)
+		padding: 20px 0
+		+media-breakpoint-down(lg)
+			display: block
+		.company
+			+fs(14rem)
+			font-weight: 700
+			text-transform: uppercase
+			margin-bottom: 10px
+		.contact-info
+			li
+				padding-left: 25px
+				+pos(rel,null)
+				+fs(14rem)
+				line-height: 1.4
+				color: darken($white,60%)
+				margin-bottom: 5px
+				.material-icons
+					+pos(abs, 1px null null 0)
+					+fs(18rem)

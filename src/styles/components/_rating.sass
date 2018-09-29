@@ -1,0 +1,14 @@
+.br-theme-fontawesome-stars 
+	.br-widget 
+		height: auto
+		+flexbox
+		align-items: center
+		align-content: center
+		a
+			display: block
+			+fs(14rem)
+			&:after
+			&.br-active, &.br-selected
+				&:after
+					color: $amber
+.br-theme-fontawesome-stars .br-widget a.br-selected:after
