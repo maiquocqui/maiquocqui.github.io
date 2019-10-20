@@ -8031,13 +8031,6 @@ input[type="reset"] {
       .dropdown-custom .dropdown-menu .dropdown-title .btn-closedropdown:hover {
         color: #333333; } }
 
-.form-wrap .module-title {
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: #18a0c6;
-  text-transform: uppercase;
-  margin-bottom: 5px; }
-
 .form-wrap .form-group {
   margin-bottom: 10px; }
 
@@ -8064,8 +8057,8 @@ input[type="reset"] {
     color: inherit;
     opacity: 0.5; }
   .form-wrap input:active, .form-wrap input:focus, .form-wrap select:active, .form-wrap select:focus, .form-wrap textarea:active, .form-wrap textarea:focus {
-    border-color: #2cbde5;
-    box-shadow: 0 0 0 0.2rem rgba(24, 160, 198, 0.2); }
+    border-color: #23c4ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 175, 239, 0.2); }
 
 .form-wrap select {
   padding: 9px 15px; }
@@ -9467,7 +9460,8 @@ header.header2 {
 .breadcrumb-wrap {
   position: relative; }
   .breadcrumb-wrap .breadcrumb-bg {
-    height: 300px; }
+    height: 300px;
+    filter: brightness(70%); }
   .breadcrumb-wrap .breadcrumb {
     position: absolute;
     top: 50px;
@@ -9527,7 +9521,8 @@ header.header2 {
       color: #333333; }
 
 footer.footer1 {
-  background: #fff; }
+  background: #fff url(../img/footer-bg.jpg) bottom left no-repeat;
+  background-size: 400px; }
   footer.footer1 .footer-wrap {
     padding: 60px 0; }
     footer.footer1 .footer-wrap .footer-about .company {
@@ -11073,6 +11068,10 @@ footer.footer1 {
       #scrollUp:before {
         font-size: 1.5rem; } }
 
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 500; }
+
 .hot-news {
   background: #fff;
   margin-top: 50px;
@@ -11103,6 +11102,8 @@ footer.footer1 {
       overflow: hidden; }
       .hot-news figure .news-img img {
         width: 100%;
+        height: 380px;
+        object-fit: cover;
         -webkit-transition: all, 0.3s;
         -khtml-transition: all, 0.3s;
         -moz-transition: all, 0.3s;
@@ -11172,6 +11173,8 @@ footer.footer1 {
     overflow: hidden; }
     .news-list .news-item figure .news-img img {
       width: 100%;
+      height: 220px;
+      object-fit: cover;
       -webkit-transition: all, 0.3s;
       -khtml-transition: all, 0.3s;
       -moz-transition: all, 0.3s;
@@ -11191,6 +11194,7 @@ footer.footer1 {
       line-height: 1.2;
       font-weight: 500;
       margin-bottom: 10px;
+      min-height: 42px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -11210,6 +11214,9 @@ footer.footer1 {
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis; }
+
+.news-list .col-lg-6 .news-item figure .news-img img {
+  height: 300px; }
 
 .news-page .btn-wrap {
   text-align: center;
@@ -11247,7 +11254,7 @@ footer.footer1 {
         font-size: 1.75rem;
         margin: 10px 0 15px; }
     .hot-news2 .news-item.big:hover figure figcaption {
-      padding-bottom: 60px; }
+      padding-bottom: 70px; }
       .hot-news2 .news-item.big:hover figure figcaption .btn-link {
         opacity: 1;
         margin-bottom: 0; }
@@ -11283,9 +11290,7 @@ footer.footer1 {
         display: inline-block;
         vertical-align: middle;
         color: #fff;
-        font-size: 0.6875rem;
-        margin-top: 1px;
-        margin-left: 10px; }
+        font-size: 0.6875rem; }
         .hot-news2 .news-item figure figcaption time:before {
           content: '\e864';
           font-family: Linearicons-Free;
@@ -11303,6 +11308,11 @@ footer.footer1 {
         margin: 10px 0 0; }
       .hot-news2 .news-item figure figcaption .news-des {
         font-size: 0.8125rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
         color: #fff; }
       .hot-news2 .news-item figure figcaption .btn-link {
         font-size: 0.75rem;
@@ -11373,6 +11383,10 @@ footer.footer1 {
       width: 250px;
       border-radius: 5px;
       overflow: hidden; }
+      .news-list2 .news-item figure .news-img img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover; }
     .news-list2 .news-item figure figcaption {
       flex: 1;
       padding-left: 20px; }
@@ -11504,5 +11518,139 @@ footer.footer1 {
     .news-list4 .news-item figure figcaption time {
       font-size: 0.75rem;
       color: #fff; }
+
+.contact-detail {
+  margin: 40px 0 0;
+  background: #fff;
+  padding: 40px;
+  text-align: center;
+  height: calc(100% - 40px); }
+  .contact-detail .fa {
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #2957a4;
+    width: 86px;
+    height: 86px;
+    border-radius: 100%;
+    background: rgba(0, 175, 239, 0.5);
+    margin-bottom: 15px; }
+  .contact-detail .title {
+    margin: 10px 0;
+    font-size: 1.125rem;
+    line-height: 1;
+    font-weight: 700;
+    color: #2957a4; }
+
+.contact-page {
+  margin: 40px 0;
+  background: #fff;
+  padding: 40px; }
+  .contact-page .contact-form .module-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px; }
+  .contact-page .contact-form .form-wrap {
+    max-width: 700px;
+    margin: 0 auto; }
+  .contact-page .btn-wrap {
+    text-align: center; }
+    .contact-page .btn-wrap input[type="submit"] {
+      width: auto;
+      border-radius: 5px;
+      background: #2957a4;
+      color: #fff;
+      font-size: 0.875rem; }
+
+.category-block {
+  background: #fff; }
+  .category-block .categories ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center; }
+    .category-block .categories ul li {
+      padding: 15px 15px; }
+      .category-block .categories ul li a {
+        font-size: 0.8125rem;
+        text-transform: capitalize; }
+      .category-block .categories ul li.active a {
+        color: #00afef; }
+
+.picture-page {
+  margin: 40px 0; }
+  .picture-page .card-columns .card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: none; }
+
+.video-page {
+  margin: 40px 0; }
+  .video-page .video-block {
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .video-page .video-block .video-frame {
+      width: 70%; }
+    .video-page .video-block .video-list {
+      width: 30%;
+      height: 440px;
+      overflow: auto; }
+      .video-page .video-block .video-list::-webkit-scrollbar-track {
+        background-color: #cccccc;
+        border-radius: 100px; }
+      .video-page .video-block .video-list::-webkit-scrollbar {
+        width: 6px;
+        background-color: #fff;
+        border-radius: 100px; }
+      .video-page .video-block .video-list::-webkit-scrollbar-thumb {
+        background-color: #2957a4;
+        border-radius: 100px; }
+      .video-page .video-block .video-list .video-item {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 10px 15px;
+        position: relative; }
+        .video-page .video-block .video-list .video-item:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: 5px;
+          background: #00afef;
+          opacity: 0; }
+        .video-page .video-block .video-list .video-item.active {
+          background: rgba(0, 175, 239, 0.05); }
+          .video-page .video-block .video-list .video-item.active:before {
+            opacity: 1; }
+          .video-page .video-block .video-list .video-item.active .info .name {
+            color: #00afef; }
+        .video-page .video-block .video-list .video-item .img {
+          width: 120px; }
+        .video-page .video-block .video-list .video-item .info {
+          flex: 1;
+          padding: 5px 10px; }
+          .video-page .video-block .video-list .video-item .info .name {
+            font-size: 0.875rem;
+            line-height: 1.3;
+            font-weight: 500; }
+          .video-page .video-block .video-list .video-item .info time {
+            font-size: 0.6875rem;
+            opacity: 0.5; }
 
 /*# sourceMappingURL=main.css.map */
