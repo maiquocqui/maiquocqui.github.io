@@ -8041,12 +8041,13 @@ input[type="reset"] {
   padding: 8px 0; }
 
 .form-wrap input, .form-wrap select, .form-wrap textarea {
-  font-size: 0.8125rem;
-  padding: 8px 15px;
+  font-size: 0.875rem;
+  padding: 10px 20px;
   border-radius: 5px;
   border: 1px solid #e6e6e6;
   width: 100%;
   color: #333333;
+  border-radius: 0;
   -webkit-transition: all, 0.5s;
   -khtml-transition: all, 0.5s;
   -moz-transition: all, 0.5s;
@@ -8077,7 +8078,8 @@ input[type="reset"] {
 
 .form-wrap input[type="submit"] {
   width: 100%;
-  border: none; }
+  border: none;
+  border-radius: 0; }
 
 .form-des {
   font-size: 0.8125rem;
@@ -11519,73 +11521,79 @@ footer.footer1 {
       font-size: 0.75rem;
       color: #fff; }
 
-.contact-detail {
-  margin: 40px 0 0;
-  background: #fff;
-  padding: 40px;
-  text-align: center;
-  height: calc(100% - 40px); }
-  .contact-detail .fa {
-    display: inline-flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: #2957a4;
-    width: 86px;
-    height: 86px;
-    border-radius: 100%;
-    background: rgba(0, 175, 239, 0.5);
-    margin-bottom: 15px; }
-  .contact-detail .title {
-    margin: 10px 0;
-    font-size: 1.125rem;
-    line-height: 1;
-    font-weight: 700;
-    color: #2957a4; }
+.contact-detail .logo {
+  margin-bottom: 15px; }
+  .contact-detail .logo img {
+    width: 100px; }
+
+.contact-detail .company {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+
+.contact-detail .contact-info {
+  font-size: 0.875rem; }
+  .contact-detail .contact-info li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px; }
+    .contact-detail .contact-info li .fa {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      color: #00afef; }
 
 .contact-page {
   margin: 40px 0;
   background: #fff;
   padding: 40px; }
+  .contact-page .maps {
+    margin: -20px -20px 40px; }
   .contact-page .contact-form .module-title {
     font-size: 0.875rem;
-    font-weight: 500;
-    text-align: center;
     margin-bottom: 10px; }
   .contact-page .contact-form .form-wrap {
     max-width: 700px;
     margin: 0 auto; }
-  .contact-page .btn-wrap {
-    text-align: center; }
-    .contact-page .btn-wrap input[type="submit"] {
-      width: auto;
-      border-radius: 5px;
-      background: #2957a4;
-      color: #fff;
-      font-size: 0.875rem; }
+  .contact-page .btn-wrap input[type="submit"] {
+    width: auto;
+    background: #2957a4;
+    color: #fff;
+    font-size: 0.875rem; }
 
-.category-block {
-  background: #fff; }
-  .category-block .categories ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center; }
-    .category-block .categories ul li {
-      padding: 15px 15px; }
-      .category-block .categories ul li a {
-        font-size: 0.8125rem;
-        text-transform: capitalize; }
-      .category-block .categories ul li.active a {
-        color: #00afef; }
+.sidebar-categories {
+  margin-top: 40px;
+  background: #f2f2f2; }
+  .sidebar-categories .categories ul li {
+    margin-bottom: 5px; }
+    .sidebar-categories .categories ul li a {
+      display: block;
+      padding: 8px 20px;
+      font-size: 0.8125rem;
+      text-transform: capitalize;
+      background: #fff; }
+    .sidebar-categories .categories ul li:hover a {
+      color: #00afef; }
+    .sidebar-categories .categories ul li.active a {
+      color: #fff;
+      background: #2957a4; }
 
 .picture-page {
   margin: 40px 0; }
+  .picture-page .album-list .album-item {
+    background: #fff;
+    margin-bottom: 30px;
+    cursor: pointer; }
+    .picture-page .album-list .album-item .img img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover; }
+    .picture-page .album-list .album-item .info {
+      padding: 10px 20px; }
+      .picture-page .album-list .album-item .info .name {
+        font-size: 0.9375rem;
+        font-weight: 500; }
   .picture-page .card-columns .card {
     margin-bottom: 20px;
     border: none;
@@ -11593,6 +11601,72 @@ footer.footer1 {
 
 .video-page {
   margin: 40px 0; }
+  .video-page .video-list .video-item {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    -webkit-transition: all, 0.3s;
+    -khtml-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    -ms-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    .video-page .video-list .video-item:hover {
+      box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.04), -10px 0 20px 0px rgba(0, 0, 0, 0.04); }
+      .video-page .video-list .video-item:hover .img img {
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        -khtml-transform: scale3d(1.1, 1.1, 1);
+        -moz-transform: scale3d(1.1, 1.1, 1);
+        -ms-transform: scale3d(1.1, 1.1, 1);
+        -o-transform: scale3d(1.1, 1.1, 1);
+        transform: scale3d(1.1, 1.1, 1); }
+    .video-page .video-list .video-item .img {
+      overflow: hidden; }
+      .video-page .video-list .video-item .img img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        -webkit-transition: all, 0.3s;
+        -khtml-transition: all, 0.3s;
+        -moz-transition: all, 0.3s;
+        -ms-transition: all, 0.3s;
+        -o-transition: all, 0.3s;
+        transition: all, 0.3s; }
+    .video-page .video-list .video-item .info {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+      padding: 15px 20px;
+      padding-left: 80px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff; }
+      .video-page .video-list .video-item .info:before {
+        content: '\f144';
+        font-size: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        -webkit-transform: translateY(-50%);
+        -khtml-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%); }
+      .video-page .video-list .video-item .info .name {
+        font-size: 1.125rem;
+        line-height: 1.2;
+        font-weight: 700;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .video-page .video-list .video-item .info time {
+        font-size: 0.75rem;
+        line-height: 1;
+        opacity: 0.7; }
   .video-page .video-block {
     background: #fff;
     display: -webkit-box;
