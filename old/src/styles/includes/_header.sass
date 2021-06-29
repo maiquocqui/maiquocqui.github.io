@@ -1,0 +1,247 @@
+header
+	.header-intro
+		+pos(fix, 0 null 0 0)
+		width: 50%
+		z-index: 1000
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		+transition(all,0.5s)
+		+media-breakpoint-down(md)
+			+pos(fix, 0 0 unset 0)
+			width: 100%
+			height: 50vh
+		+media-breakpoint-down(sm)
+			width: 50%
+			height: 100vh
+			+pos(fix, 0 unset 0 0)
+		+media-breakpoint-down(xs)
+			width: 100%
+			height: 50vh
+			+pos(fix,0 0 unset 0)
+		&:before
+			content: ''
+			background: #1a1b23
+			opacity: 0.8
+			+pos(abs,0 null 0 0)
+			right: 0
+			z-index: 1
+			+transition(all,1s)
+		.intro-bg
+			+pos(abs, 0 null 0 0)
+			right: 0
+			filter: grayscale(100%)
+			+transition(all,1s)
+		&:hover
+			&:before 
+				opacity: 0.5
+			.intro-bg
+				filter: grayscale(0)
+		.intro-content
+			+pos(rel,null)
+			z-index: 3
+			+flexbox
+			align-items: center
+			align-content: center
+			// width: 100%
+			max-width: 90%
+			+media-breakpoint-down(lg)
+				max-width: 80%
+				flex-wrap: wrap
+				justify-content: center
+			+media-breakpoint-down(md)
+				max-width: 50%
+			+media-breakpoint-down(sm)
+				max-width: 100%
+				padding: 0px 15px
+			.img
+				width: 180px
+				height: 180px
+				border: 5px solid $white
+				+bor-rad(50%)
+				overflow: hidden
+				box-shadow: 0px 3px 10px color-rgba($black,0.1)
+				+media-breakpoint-down(lg)
+					margin-bottom: 15px
+				+media-breakpoint-down(sm)
+					width: 120px
+					height: 120px
+					margin-bottom: 10px
+			.caption
+				color: $white
+				width: calc(100% - 180px)
+				padding-left: 20px
+				line-height: 1.5
+				+media-breakpoint-down(lg)
+					width: 100%
+					padding-left: 0
+					text-align: center
+				.wellcome
+					+fs(14rem)
+					+media-breakpoint-down(sm)
+						+fs(12rem)
+				.name
+					+fs(36rem)
+					font-weight: 300
+					color: $amber
+					text-transform: uppercase
+					margin-bottom: 5px
+					+media-breakpoint-down(sm)
+						+fs(24rem)
+					strong
+						font-weight: 600
+				.cv
+					font-weight: 300
+					text-transform: uppercase
+					opacity: 0.8
+					margin-bottom: 10px
+				.des
+					+fs(14rem)
+					white-space: nowrap
+					margin-bottom: 0px
+					+media-breakpoint-down(sm)
+						+fs(12rem)
+						white-space: normal
+					strong
+					span
+						opacity: 0.8
+					a
+						display: inline-block
+						vertical-align: middle
+						background: color-rgba($white,0.1)
+						+fs(9rem)
+						font-weight: 600
+						text-transform: uppercase
+						padding: 5px 10px
+						+bor-rad(50px)
+						margin-left: 10px
+						+transform(translateY(-2px))
+						&:hover
+							color: $amber
+	.header-menu
+		+pos(fix, 0 0 0 null)
+		width: 50%
+		z-index: 1000
+		+transition(all,0.5s)
+		+media-breakpoint-down(md)
+			width: 100%
+			height: 50vh
+			+pos(fix, unset 0 0 0)
+		+media-breakpoint-down(sm)
+			width: 50%
+			height: 100vh
+			+pos(fix, 0 0 0 unset)
+		+media-breakpoint-down(xs)
+			width: 100%
+			height: 50vh
+			+pos(fix, unset 0 0 0)
+		ul
+			height: 100%
+			li
+				height: 25%
+				a
+					+flexbox
+					align-items: center
+					align-content: center
+					padding: 10px 100px
+					height: 100%
+					color: $white
+					overflow: hidden
+					+pos(rel,null)
+					+media-breakpoint-down(lg)
+						padding: 10px 40px
+					+media-breakpoint-down(sm)
+						padding: 5px 25px
+					&:before
+						content: ''
+						background: #1a1b23
+						opacity: 0.8
+						+pos(abs,0 null 0 0)
+						right: 0
+						z-index: 1
+						+transition(all,1s)
+					.bg
+						+pos(abs, 0 null 0 0)
+						right: 0
+						filter: grayscale(100%)
+						+transition(all,1s)
+					.icon
+						+pos(rel,null)
+						z-index: 3
+						width: 60px
+						height: 60px
+						+flexbox
+						align-items: center
+						align-content: center
+						justify-content: center
+						+bor-rad(50px)
+						background: color-rgba($white,0.2)
+						+transition(all,0.5s)
+						+media-breakpoint-down(sm)
+							width: 50px
+							height: 50px
+						.material-icons
+							display: block
+							+fs(32rem)
+							+media-breakpoint-down(sm)
+								+fs(24rem)
+						&:before
+							content: ''
+							+pos(abs, 0 null 0 0)
+							right: 0
+							background: color-rgba($amber,0.2)
+							+bor-rad(50px)
+							opacity: 0
+					.caption
+						+pos(rel,null)
+						z-index: 3
+						width: calc(100% - 60px)
+						padding-left: 40px
+						line-height: 1.3
+						+media-breakpoint-down(lg)
+							padding-left: 20px
+						.name
+							+fs(24rem)
+							font-weight: 600
+							text-transform: uppercase
+							+transition(all,0.5s)
+							+media-breakpoint-down(lg)
+								+fs(18rem)
+							+media-breakpoint-down(sm)
+								+fs(16rem)
+							+media-breakpoint-down(xs)
+								+fs(14rem)
+						.des
+							+fs(14rem)
+							font-style: italic
+							opacity: 0.5
+							+media-breakpoint-down(lg)
+								+fs(13rem)
+							+media-breakpoint-down(sm)
+								+fs(12rem)
+							+media-breakpoint-down(xs)
+								+fs(11rem)
+					&:hover
+						&:before
+							// background: darken($amber,50%)
+							opacity: 0.5
+						.bg
+							filter: grayscale(0)
+						.icon
+							// color: $amber
+							&:before
+								animation-name: hotline-animate
+								animation-duration: 1s
+								animation-iteration-count: infinite
+						.name
+							color: $amber
+	&.open
+		.header-intro
+			+transform(translateX(-100%))
+			+media-breakpoint-down(md)
+				+transform(translate(0,-100%))
+		.header-menu
+			+transform(translateX(100%))
+			+media-breakpoint-down(md)
+				+transform(translate(0,100%))

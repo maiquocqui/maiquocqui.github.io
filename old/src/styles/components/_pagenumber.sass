@@ -1,0 +1,39 @@
+
+.pages
+	padding: 20px 0
+	ul.pagination
+		+flexbox
+		justify-content: center
+		li
+			+ li
+				margin-left: 10px
+			a, span
+				width: 30px
+				height: 30px
+				+flexbox
+				justify-content: center
+				align-items: center
+				color: darken($white,40%)
+				+fs(14rem)
+				font-weight: 500
+				background: none
+				border-bottom: 3px solid transparent
+				+bor-rad(0px)
+			&.prev
+				a
+					+fs(18rem)
+					&:before
+						content: '\f104'
+			&.next
+				a
+					+fs(18rem)
+					&:before
+						content: '\f105'
+			&:hover
+				a, span
+					color: $blue
+			&.active
+				a, span
+					font-weight: 700
+					border-bottom-color: $red
+					color: $black

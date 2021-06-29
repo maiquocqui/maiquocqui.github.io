@@ -1,0 +1,71 @@
+body.modal-open
+	padding-right: 0 !important
+	.modal
+		&::-webkit-scrollbar-track
+		&::-webkit-scrollbar
+			width: 0
+		&::-webkit-scrollbar-thumb
+.modal-backdrop
+	-webkit-backdrop-filter: blur(10px)
+	backdrop-filter: blur(10px)
+.modal
+	padding-right: 0 !important
+.modal-dialog
+	margin: 60px auto
+	.modal-content
+		+bor-rad(5px)
+		border: none
+		overflow: hidden
+		// box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+		+pos(rel,null)
+	.modal-header
+		padding: 18px 15px 15px
+		border-bottom: 1px solid darken($white,10%)
+		+pos(rel,null)
+		.modal-title
+			+fs(16rem)
+			font-weight: 700
+			text-transform: uppercase
+			&:before
+				content: ''
+				+pos(abs, 0 0 null 0)
+				height: 3px
+				background: $bluegradient
+		.close
+			margin: 0
+			padding: 0
+			opacity: 1
+			+pos(abs, 16px 15px null null)
+			color: darken($white,40%)
+			+transition(all,0.5s)
+			.material-icons
+				display: block
+			&:hover
+				color: $red
+	.modal-body
+		padding: 20px
+	&.modal-check
+		min-width: 1000px
+		.check-form
+			max-width: 300px
+			.search-wrap
+				label
+					display: block
+					+fs(14rem)
+					font-weight: 500
+					padding: 5px 0
+				.searchbox
+					+flexbox
+					+pos(rel,null)
+					.searchbutton
+						width: 40px
+						text-align: center
+						+pos(abs, 0 0 0 null)
+						+flexbox
+						align-items: center
+						align-content: center
+						justify-content: center
+						.material-icons
+							display: block
+						&:hover
+							color: $blue

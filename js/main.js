@@ -1,39 +1,74 @@
 'use strict';
 
-$(document).ready(function () {
-    console.log("COPYRIGHT © 2018, Quoc Qui Mai Resume. Designed by Quoc Qui Mai.");
+$(document).ready(function() {
+  setTimeout(function() {
+    $('.loading').fadeOut(500);
+  }, 1000);
+  setTimeout(function() {
+    $('.loading').remove();
+  }, 2000);
 
-    $('.header-menu a').click(function () {
-        $('.home-section').hide();
-        var targetID = $(this).attr('href');
-        $('header').addClass('open');
-        $(targetID).show();
-    });
-
-    $('.btn-close').click(function () {
-        $('header').removeClass('open');
-    });
-    var $grid = $('.grid').isotope({
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows',
-        gutter: 0,
-        filter: '*'
-    });
-
-    $('.portfolio-category a').click(function () {
-        $('.portfolio-category a').removeClass('active');
-        $(this).addClass('active');
-        var targetFilter = $(this).attr('data-filter');
-        $grid.isotope({ filter: targetFilter });
-    });
-    $('.header-menu a[href="#portfolio"]').click(function () {
-        $grid.isotope({ filter: '*' });
-    });
-    $(window).bind('scroll', function () {
-        if ($(window).scrollTop() >= 250) {
-            $('.btn-close').addClass('active');
-        } else {
-            $('.btn-close').removeClass('active');
-        }
-    });
+  responsive();
 });
+
+$(window).resize(function() {
+  responsive();
+});
+
+function responsive() {
+  if ($(window).innerWidth() <= 991) {
+    $('.menu ul li a, #btn-discover').on('click', function() {
+      if ($(this).attr('data-target').length) {
+        $('html, body').animate({
+          scrollTop: $('#' + $(this).attr('data-target')).offset().top
+        }, 500);
+      }
+    });
+
+    $('.profile .img').height($(window).innerHeight() - 45 - 60);
+    $(window).scroll(function() {
+      var scrollVal = $(this).scrollTop();
+      var activeId;
+
+      $('.content-section').map(function() {
+        var offsetTop = $(this).offset().top;
+        var height = $(this).innerHeight();
+
+        if (scrollVal >= offsetTop - 200 && scrollVal < offsetTop + height) {
+          activeId = $(this).attr('id');
+        }
+      });
+
+      $('.menu ul li a').removeClass('active');
+      $('a[data-target="' + activeId + '"]').addClass('active');
+    });
+  } else {
+    $('.menu ul li a').on('click', function() {
+      if ($(this).attr('data-target').length) {
+        $('.scroll-content').animate({
+          scrollTop: $('#' + $(this).attr('data-target')).position().top + $('.scroll-content').scrollTop()
+        }, 500);
+      }
+    });
+
+    $('.profile .img').removeAttr('style');
+
+    $('.menu ul li').eq(0).children('a').addClass('active');
+
+    $('.scroll-content').scroll(function() {
+      var selectArr = [];
+      var activeId = 'about';
+
+      $('.content-section').map(function() {
+        if ($(this).position().top <= 200) {
+          selectArr.push(this);
+        }
+      });
+
+      activeId = $(selectArr[selectArr.length - 1]).attr('id');
+
+      $('.menu ul li a').removeClass('active');
+      $('a[data-target="' + activeId + '"]').addClass('active');
+    });
+  }
+}

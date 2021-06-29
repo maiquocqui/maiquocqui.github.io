@@ -1,0 +1,135 @@
+// FORM INIT
+.form-wrap
+	.form-group
+		margin-bottom: 10px
+	label
+		display: block
+		+fs(13rem)
+		color: darken($white,60%)
+		// font-weight: 500
+		padding: 8px 0
+	input, select, textarea
+		+fs(13rem)
+		padding: 7px 15px
+		+bor-rad(3px)
+		border: 1px solid darken($white,10%)
+		width: 100%
+		color: $main
+		+transition(all,0.5s)
+		&::-webkit-input-placeholder
+			color: inherit
+			opacity: 0.5
+		&:active, &:focus
+			border-color: lighten($red,20%)
+			box-shadow: 0 0 0 0.2rem color-rgba($red,0.1)
+	ul.gender
+		+flexbox
+		align-items: center
+		align-content: center
+		li
+			label
+				width: auto
+			+ li
+				margin-left: 30px
+	select
+		padding: 8px 15px
+
+// FORM COMPONENTS
+.input-number
+	+flexbox
+	border: 1px solid darken($white,10%)
+	+bor-rad(5px)
+	background: $white
+	width: 72px
+	.btn-spin
+		width: 20px
+		height: 22px
+		+fs(14rem)
+		line-height: 22px
+		text-align: center
+		font-weight: 700
+		cursor: pointer
+	input 
+		width: 30px
+		margin: 0
+		padding: 0
+		border: none
+		line-height: 22px
+		text-align: center
+		+fs(13rem)
+		font-weight: 700
+
+.checkbox
+	input
+		display: none
+		+ label
+			color: $main
+			padding: 0 0 0 20px
+			+pos(rel,null)
+			+fs(14rem)
+			&:hover
+				color: $main
+			&:before
+				content: ''
+				width: 14px
+				height: 14px
+				+bor-rad(5px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 3px null null 0)
+			&:after
+				content: '\f00c'
+				width: 14px
+				height: 14px
+				+bor-rad(3px)
+				color: $red
+				line-height: 1
+				+pos(abs, 3px null null 0)
+				z-index: 1
+				opacity: 0
+		&:checked
+			+ label
+				&:after
+					opacity: 1
+.radio
+	input
+		display: none
+		+ label
+			color: $main
+			padding: 0 0 0 20px
+			+pos(rel,null)
+			+fs(14rem)
+			&:hover
+				color: $main
+			&:before
+				content: ''
+				width: 14px
+				height: 14px
+				+bor-rad(50px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 3px null null 0)
+			&:after
+				content: ''
+				width: 6px
+				height: 6px
+				+bor-rad(50px)
+				background: $red
+				+pos(abs, 7px null null 4px)
+				z-index: 1
+				opacity: 0
+		&:checked
+			+ label
+				&:after
+					opacity: 1
+.file
+	input[type="file"]
+		display: none
+	label
+		&:hover
+			color: $black
+// label
+// 	a
+// 		color: $blue
+// 		text-decoration: underline
+// 		&:hover
+// 			color: $purple
+// 			text-decoration: underline
