@@ -19,7 +19,7 @@ function responsive() {
   if ($(window).innerWidth() <= 991) {
     $('.menu ul li a, #btn-discover').on('click', function() {
       if ($(this).attr('data-target').length) {
-        $('html, body').animate({
+        $('html').animate({
           scrollTop: $('#' + $(this).attr('data-target')).offset().top
         }, 500);
       }
