@@ -60,7 +60,7 @@ function responsive() {
       var activeId = 'about';
 
       $('.content-section').map(function() {
-        if ($(this).position().top <= 200) {
+        if ($(this).position().top <= 100) {
           selectArr.push(this);
         }
       });

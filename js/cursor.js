@@ -92,4 +92,6 @@ var initCanvas = function initCanvas() {
   };
 };
 
-initCanvas();
+if ($(window).innerWidth() >= 1200) {
+  initCanvas();
+}
