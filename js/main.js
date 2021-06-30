@@ -21,7 +21,7 @@ function responsive() {
       if ($(this).attr('data-target').length) {
         $('html').animate({
           scrollTop: $('#' + $(this).attr('data-target')).offset().top
-        }, 500);
+        });
       }
     });
 
@@ -47,7 +47,7 @@ function responsive() {
       if ($(this).attr('data-target').length) {
         $('.scroll-content').animate({
           scrollTop: $('#' + $(this).attr('data-target')).position().top + $('.scroll-content').scrollTop()
-        }, 500);
+        });
       }
     });
 
